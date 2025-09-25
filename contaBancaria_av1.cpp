@@ -87,17 +87,19 @@ public:
         }
     }
 
-    void exibirInformacoes(){
+    void exibirInformacoes(){       // método para exibir todas as info's da conta
         cout << "Titular: " << titular.nome << ", CPF: " << titular.cpf << "\nNúmero da conta: " << numero << ", ";
         exibirSaldo();
     }
 
-    void exibirSaldo(){
+    void exibirSaldo(){         // método para exibir saldo em conta
         cout << "Saldo na conta: R$" << saldo << endl;
     }
 
 };
 
+
+// main ---------------------
 int main()
 {
     setlocale(LC_ALL, "Portuguese");
@@ -126,7 +128,6 @@ int main()
     conta1.exibirInformacoes();
     conta2.exibirInformacoes();
     conta3.exibirInformacoes();
-
 
     return 0;
 }
