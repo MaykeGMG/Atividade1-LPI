@@ -33,11 +33,12 @@ public:
 
 // classe Conta Bancária -------------------------
 class ContaBancaria{
-public:
+private:
     int numero;
     double saldo;
     Cliente titular;
 
+public:
     ContaBancaria(int num, Cliente &c){      //contrutor "minimo", com número e titular
         numero = num;
         titular = c;
