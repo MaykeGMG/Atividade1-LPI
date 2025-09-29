@@ -2,22 +2,31 @@
 #include <string>
 #include <locale.h>
 using namespace std;
+#include "contaBancaria_av1.h"
 
 //classe cliente ----------------------
 class Cliente{
-public:
+private:
     string nome, cpf;
-
+    
+public:
     Cliente(){          // contrutor sem parâmetros pois ocorre um erro quando não tem
-        nome = "Laranja";
-        cpf = "100.000.000-01";
-    }
+            nome = "Laranja";
+            cpf = "100.000.000-01";
+        }
     Cliente(string s, string n){
         nome = s;
         cpf = n;
     }
+    // métodos getter para nome e cpf
+    string getClientNome(){
+        return nome;
+    }
+    string getClientCPF(){
+        return cpf;
+    }
 
-    void exibirInfoCliente(){
+    void getInfoCliente(){
         cout << "Nome do Cliente: " << nome << ", CPF: " << cpf << endl;
     }
 };
@@ -88,7 +97,7 @@ public:
     }
 
     void exibirInformacoes(){       // método para exibir todas as info's da conta
-        cout << "Titular: " << titular.nome << ", CPF: " << titular.cpf << "\nNúmero da conta: " << numero << ", ";
+        cout << "Titular: " << titular.getClientNome() << ", CPF: " << titular.getClientCPF() << "\nNúmero da conta: " << numero << ", ";
         exibirSaldo();
     }
 
